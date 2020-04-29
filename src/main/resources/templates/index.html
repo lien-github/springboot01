@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<!--引入thymeleaf 引擎才能使用thymeleaf语法，例如： th:* -->
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div>
+        <span>访问 Model：</span>
+        <span th:text="${persion.name}">哈哈哈</span>
+
+    </div>
+    <div>
+        <span>访问列表</span>
+        <table>
+            <thead>
+                <tr>
+                    <th>姓名</th>
+                    <th>年龄</th>
+
+                </tr>
+
+            </thead>
+            <tbody>
+                <tr th:each="human : ${persionList}">
+                    <td th:text="${human.name}">测试</td>
+                    <td th:text="${human.age}">年龄</td>
+
+                </tr>
+
+            </tbody>
+
+        </table>
+
+    </div>
+</body>
+</html>
